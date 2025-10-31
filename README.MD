@@ -1,5 +1,5 @@
 
-# 👋 Hello, I'm Riya Sharma
+# Hello, I'm Riya Sharma
 
 I am currently pursuing **BCA (Online)** from **Amity University, Noida**.  
 I have learned **HTML5** and **CSS3**, and I am now learning **JavaScript**.
