@@ -1,0 +1,1232 @@
+*{
+     padding:0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+
+}
+
+body{
+       min-height: 100vh;
+     height: 100%;
+     width: 100%;
+}
+
+header nav {
+     background-color: black;
+     color: white;
+     display: flex;
+     justify-content: space-between;
+     align-items: stretch;
+     height:100%;
+     width: 100%;
+  gap:10px;   
+  padding: 0;
+  border-bottom: 1px solid #333;
+  
+}
+
+.hamburger {
+  display: none;
+}
+
+.location , .no, .id  {
+  display: flex;
+  align-items: center;
+  gap: 3px; /* icon aur text ke beech gap */
+  padding: 10px 0; /* thoda andar ki spacing */
+  padding-left: 5px;
+  padding-right: 100px;
+  border-right: 1px solid #333;
+ 
+}
+
+.id{
+  border: none;
+}
+
+.id i {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+.id i:hover {
+  color: #777;
+}
+
+
+/* Parent (relative) = Mahal / Palace (ek jagah fixed kar diya).
+
+Child (absolute) = Raja ki kursi (us mahal ke andar kahin bhi rakh sakte ho). */  
+
+
+
+ .loca-i {
+  position: relative;
+  padding:4px ;
+  cursor: pointer;
+}
+
+.loca-i ::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+height: 1px;
+width: 0;
+background-color: white;
+  transition: all 0.3s ease;
+
+}
+
+.loca-i :hover::after{
+  width: 100%;
+} 
+
+
+
+
+.add{
+       background-color: black;
+     color: white;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: auto;
+     width: 100%;
+  gap: 10px;    
+padding: 20px;
+
+}
+
+.add img{
+     height: 70px;
+     width: 250px;
+     padding: 4px;
+     cursor: pointer;
+}
+
+
+.add button{
+     font-size: 18px;
+     padding: 12px;
+     background-color: black;
+     color: white;
+     border: 1px solid white;
+     text-transform: uppercase;
+     transition: 0.5s linear 0.5s;
+     cursor: pointer;
+     font-weight: 500;
+}
+
+
+.add button:hover{
+background-color: white;
+color: #333;
+}
+
+
+.add-li {
+  cursor: pointer;
+  display: flex;
+  gap: 30px;
+  background: black;
+  padding: 15px;
+}
+
+.add-li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* underline banate hain */
+.add-li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;               /* text ke niche */
+  width: 0;
+  height: 1px;
+  background: white;         /* underline color */
+  transition: width 0.3s ease;  /* smooth effect */
+}
+
+/* hover pe underline left → right */
+.add-li a:hover::after {
+  width: 100%;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+section h1{
+  font-size:50px ;
+  color: #1f1f1f;
+}
+.menu-li{
+  display: flex;
+  gap: 50px;
+  padding: 30px;
+  
+}
+
+
+.menu-li a {
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  display: inline-block; /* 👈 yeh sabse zaroori hai Zyada font / spacing wale design me → inline-block safe hai underline ko control karne ke liye. */
+  padding-bottom: 3px;   /* thoda gap underline aur text ke beech */
+  cursor: pointer;
+  text-align: center;
+}
+
+.menu-li #breakfast{
+border-bottom: 2px solid  rgb(87, 127, 131) ;
+}
+
+.menu-li #breakfast::after{
+  content: none;
+}
+
+.menu-li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(87, 127, 131);   
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+.menu-li a:hover::after {
+  width: 100%;
+}
+
+.menu-li a:hover{
+  color:rgb(87, 127, 131) ;
+}
+
+.menu-con{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 10px;
+  gap: 50px;
+}
+
+.left-items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+    padding: 30px 0;
+  color: #1f1f1f;
+  font-size: 20px;
+  line-height: 1.3;
+ }
+
+.left-items h2{
+  font-size: 24px;
+  color: #496d7c;
+}
+
+
+
+.infor{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+ }
+
+ .cost-hide{
+  display: none;
+ }
+
+ .cost2{
+  display: none;
+ }
+
+ footer {
+  background-color: #0a1a20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+footer img {
+  height: 60px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+  
+}
+
+.address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #0a1a20;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.address a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.address a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.address h2 {
+  font-size: 20px;
+}
+
+
+.follow{
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.address button{
+  background-color: #0a1a20;
+    font-size: 18px;
+     padding: 12px;
+     color: white;
+     border: 1px solid white;
+     text-transform: uppercase;
+     transition: 0.5s linear 0.5s;
+     cursor: pointer;
+     transition: all 0.5s linear 0.5s;
+     font-weight: 400;
+}
+
+.address button:hover{
+  background-color: #f1f1f1;
+  color: rgb(1, 65, 43);
+  text-transform: uppercase;
+
+}
+
+.footer-links{
+  background-color: #0a1a20;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border-top: 1px solid #333;
+  padding: 30px 18px;
+}
+
+.footer-links a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 20px;
+
+}
+.footer-links a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.footer-links span{
+   color: #f1f1f1;
+  font-size: 20px;
+}
+
+
+@media (max-width:650px){
+
+ 
+  header nav {
+     display: flex;
+     flex-direction: column;
+     gap: 1px;
+     height:100%;
+     width: 100%;
+}
+  
+.hamburger {
+     background-color: black;
+     color: white;
+  padding: 20px ;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-evenly;
+  align-items: center;
+border-bottom: 1px solid #333;
+}
+
+.hamburger img{
+height: auto;
+    max-width: 60%;
+}
+
+.hamburger span{
+   font-size: 30px;
+   font-weight: 500;
+}
+
+
+
+.location, .no{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: none;
+  font-size: 14px;
+}
+
+.id{
+  display: none;
+}
+
+ .loca-i {
+  position: relative;
+  padding:4px ;
+  cursor: pointer;
+}
+
+.loca-i ::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+height: 1px;
+width: 0;
+background-color: white;
+  transition: all 0.3s ease;
+
+}
+
+.loca-i :hover::after{
+  width: 100%;
+} 
+
+
+.add{
+  display: none;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+
+section h1{
+  font-size:30px ;
+  color: #1f1f1f;
+}
+.menu-li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  margin-top: 60px;
+    background-color: #f3f3f3;
+    border-bottom: 2px solid #2e2e2e;
+}
+
+
+.menu-li a {
+  
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  display: inline-block; /* 👈 yeh sabse zaroori hai Zyada font / spacing wale design me → inline-block safe hai underline ko control karne ke liye. */
+  padding-bottom: 3px;   /* thoda gap underline aur text ke beech */
+  cursor: pointer;
+}
+
+.menu-li #breakfast{
+border-bottom: 2px solid  rgb(87, 127, 131) ;
+}
+
+.menu-li #breakfast::after{
+  content: none;
+}
+
+.menu-li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(87, 127, 131);   
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+.menu-li a:hover::after {
+  width: 100%;
+}
+
+.menu-li a:hover{
+  color:rgb(87, 127, 131) ;
+}
+
+.menu-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 10px;
+  gap: 50px;
+}
+
+.left-items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+    padding: 30px 0;
+  color: #1f1f1f;
+  font-size: 18px;
+  line-height: 1.3;
+ }
+
+.left-items h2{
+  font-size: 20px;
+  color: #496d7c;
+}
+
+.infor{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 18px;
+ }
+
+
+ .cost2{
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+ }
+
+  footer {
+  background-color: #0a1a20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+footer img {
+  height: 40px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3rem;
+  
+}
+.address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #0a1a20;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.address a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.address a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.address h2 {
+  font-size: 20px;
+}
+
+
+.follow{
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.address button{
+  background-color: #0a1a20;
+    font-size: 18px;
+     padding: 12px;
+     color: white;
+     border: 1px solid white;
+     text-transform: uppercase;
+     transition: 0.5s linear 0.5s;
+     cursor: pointer;
+     transition: all 0.5s linear 0.5s;
+     font-weight: 400;
+}
+
+.address button:hover{
+  background-color: #f1f1f1;
+  color: rgb(1, 65, 43);
+  text-transform: uppercase;
+
+}
+
+.footer-links{
+  background-color: #0a1a20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  gap: 10px;
+  border-top: 1px solid #333;
+  padding: 30px 18px;
+}
+
+.footer-links a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.footer-links a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.footer-links span{
+  display: none;
+   color: #f1f1f1;
+  font-size: 20px;
+}
+
+
+
+
+
+}
+
+
+@media (min-width:651px) and (max-width:800px){
+
+  
+ header nav {
+     display: flex;
+     justify-content: space-between;
+     padding: 10px;
+     align-items: center;
+     gap: 1px;
+     height:100%;
+     width: 100%;
+}
+  
+.hamburger {
+     background-color: black;
+     color: white;
+  padding: 20px ;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+border-bottom: 1px solid #333;
+}
+
+.hamburger img{
+height: auto;
+    max-width: 40%;
+}
+
+.hamburger span{
+   font-size: 50px;
+   font-weight: 500;
+}
+
+
+
+.location, .no{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: none;
+  font-size: 16px;
+}
+
+
+.id{
+  display: none;
+}
+
+ .loca-i {
+  position: relative;
+  padding:4px ;
+  cursor: pointer;
+}
+
+.loca-i ::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+height: 1px;
+width: 0;
+background-color: white;
+  transition: all 0.3s ease;
+
+}
+
+.loca-i :hover::after{
+  width: 100%;
+} 
+
+
+.add{
+  display: none;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+
+section h1{
+  font-size:38px ;
+  color: #1f1f1f;
+}
+.menu-li{
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+  background-color: #f3f3f3;
+  margin-top: 60px;
+    border-bottom: 2px solid #2e2e2e;
+}
+
+
+.menu-li a {
+  
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  display: inline-block; /* 👈 yeh sabse zaroori hai Zyada font / spacing wale design me → inline-block safe hai underline ko control karne ke liye. */
+  padding-bottom: 3px;   /* thoda gap underline aur text ke beech */
+  cursor: pointer;
+  
+}
+
+.menu-li #breakfast{
+border-bottom: 2px solid  rgb(87, 127, 131) ;
+}
+
+.menu-li #breakfast::after{
+  content: none;
+}
+
+.menu-li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(87, 127, 131);   
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+.menu-li a:hover::after {
+  width: 100%;
+}
+
+.menu-li a:hover{
+  color:rgb(87, 127, 131) ;
+}
+
+.menu-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 10px;
+  gap: 50px;
+}
+
+.left-items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+    padding: 30px 0;
+  color: #1f1f1f;
+  font-size: 20px;
+  line-height: 1.3;
+ }
+
+.left-items h2{
+  font-size: 24px;
+  color: #496d7c;
+}
+
+.infor{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 20px;
+ }
+
+
+ .cost-hide{
+  display: inline-block;
+ }
+
+ .cost2{
+  display: none;
+ }
+
+  footer {
+  background-color: #0a1a20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+footer img {
+  height: 60px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3rem;
+  
+}
+.address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #0a1a20;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.address a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.address a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.address h2 {
+  font-size: 20px;
+}
+
+
+.follow{
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.address button{
+  background-color: #0a1a20;
+    font-size: 18px;
+     padding: 12px;
+     color: white;
+     border: 1px solid white;
+     text-transform: uppercase;
+     transition: 0.5s linear 0.5s;
+     cursor: pointer;
+     transition: all 0.5s linear 0.5s;
+     font-weight: 400;
+}
+
+.address button:hover{
+  background-color: #f1f1f1;
+  color: rgb(1, 65, 43);
+  text-transform: uppercase;
+
+}
+
+.footer-links{
+  background-color: #0a1a20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  gap: 10px;
+  border-top: 1px solid #333;
+  padding: 30px 18px;
+}
+
+.footer-links a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.footer-links a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.footer-links span{
+  display: none;
+   color: #f1f1f1;
+  font-size: 20px;
+}
+
+}
+
+
+@media (min-width:801px) and (max-width:1280px){
+
+header nav {
+     display: flex;
+     justify-content: space-between;
+     padding: 10px;
+     align-items: center;
+     gap: 1px;
+     height:100%;
+     width: 100%;
+}
+  
+.hamburger {
+     background-color: black;
+     color: white;
+  padding: 20px ;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+border-bottom: 1px solid #333;
+}
+
+.hamburger img{
+height: auto;
+    max-width: 40%;
+    
+}
+
+.hamburger span{
+   font-size: 50px;
+   font-weight: 500;
+   order: 2;
+}
+
+
+
+.location, .no{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: none;
+  font-size: 16px;
+}
+
+
+.id{
+  display: none;
+}
+
+ .loca-i {
+  position: relative;
+  padding:4px ;
+  cursor: pointer;
+}
+
+.loca-i ::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+height: 1px;
+width: 0;
+background-color: white;
+  transition: all 0.3s ease;
+
+}
+
+.loca-i :hover::after{
+  width: 100%;
+} 
+
+
+.add{
+  display: none;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+
+section h1{
+  font-size:41px ;
+  color: #1f1f1f;
+}
+.menu-li{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
+  margin: 40px 0;
+    
+}
+
+
+.menu-li a {
+  
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  display: inline-block; /* 👈 yeh sabse zaroori hai Zyada font / spacing wale design me → inline-block safe hai underline ko control karne ke liye. */
+  padding-bottom: 3px;   /* thoda gap underline aur text ke beech */
+  cursor: pointer;
+}
+
+.menu-li #breakfast{
+border-bottom: 2px solid  rgb(87, 127, 131) ;
+}
+
+.menu-li #breakfast::after{
+  content: none;
+}
+
+.menu-li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(87, 127, 131);   
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+.menu-li a:hover::after {
+  width: 100%;
+}
+
+.menu-li a:hover{
+  color:rgb(87, 127, 131) ;
+}
+
+.menu-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 10px ;
+  gap: 50px;
+}
+
+.left-items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+    padding: 30px 0;
+  color: #1f1f1f;
+  font-size: 20px;
+  line-height: 1.3;
+ }
+
+.left-items h2{
+  font-size: 24px;
+  color: #496d7c;
+}
+
+.infor{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 18px;
+ }
+
+
+
+ .cost-hide{
+  display: inline-block;
+ }
+
+ .cost2{
+  display: none;
+ }
+
+  footer {
+  background-color: #0a1a20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+footer img {
+  height: 60px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3rem;
+  
+}
+.address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #0a1a20;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.address a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.address a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.address h2 {
+  font-size: 20px;
+}
+
+
+.follow{
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.address button{
+  background-color: #0a1a20;
+    font-size: 18px;
+     padding: 12px;
+     color: white;
+     border: 1px solid white;
+     text-transform: uppercase;
+     transition: 0.5s linear 0.5s;
+     cursor: pointer;
+     transition: all 0.5s linear 0.5s;
+     font-weight: 400;
+}
+
+.address button:hover{
+  background-color: #f1f1f1;
+  color: rgb(1, 65, 43);
+  text-transform: uppercase;
+
+}
+
+.footer-links{
+  background-color: #0a1a20;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  align-content: center;
+  gap: 10px;
+  border-top: 1px solid #333;
+  padding: 30px 18px;
+}
+
+.footer-links a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.footer-links a:hover{
+border-bottom: 1px solid #f1f1f1;
+}
+
+.footer-links span{
+  display: none;
+   color: #f1f1f1;
+  font-size: 20px;
+}
+
+}
